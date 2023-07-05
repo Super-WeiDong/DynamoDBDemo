@@ -37,4 +37,10 @@ public class HomeworkController {
     public void deleteHomework(@PathVariable String homeworkId) {
         homeworkService.deleteHomework(homeworkId);
     }
+
+    @PutMapping("/{homeworkId}")
+    public Homework updateHomework(@PathVariable String homeworkId, @RequestBody Homework homework) {
+        homework.setHomeworkId(homeworkId);
+        return homeworkService.updateHomework(homework);
+    }
 }

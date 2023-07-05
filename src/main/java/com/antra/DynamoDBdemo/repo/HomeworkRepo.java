@@ -10,4 +10,6 @@ public interface HomeworkRepo{
     Iterable<Homework> findAll();
     void delete(String homeworkId);
 
+    Homework updateHomework(Homework homework);
+
 }

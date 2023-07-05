@@ -36,4 +36,9 @@ public class HomeworkServiceImpl implements HomeworkService {
     public void deleteHomework(String homeworkId) {
         homeworkRepository.delete(homeworkId);
     }
+
+    @Override
+    public Homework updateHomework(Homework homework) {
+        return homeworkRepository.updateHomework(homework);
+    }
 }

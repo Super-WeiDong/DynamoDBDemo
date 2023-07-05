@@ -9,4 +9,6 @@ public interface HomeworkService {
     Homework getHomeworkById(String homeworkId);
     List<Homework> getAllHomework();
     void deleteHomework(String homeworkId);
+
+    Homework updateHomework(Homework homework);
 }

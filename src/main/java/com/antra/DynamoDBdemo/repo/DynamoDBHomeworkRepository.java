@@ -67,4 +67,13 @@ public class DynamoDBHomeworkRepository implements HomeworkRepo{
 
         table.deleteItem(deleteItemSpec);
     }
+
+    @Override
+    public Homework updateHomework(Homework homework) {
+        Table table = dynamoDB.getTable(tableName);
+        Item item = homework.toItem();
+        table.putItem(item);
+
+        return homework;
+    }
 }
